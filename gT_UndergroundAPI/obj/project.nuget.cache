@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HHu88c9hnx08sZhVExCQS1+53OABtidoI0w8pQM1Ty1nqnCtt39iAwKid1VD1g81HcTwTTR5MaszrOIMDCzcjQ==",
+  "dgSpecHash": "0a5JMps7dmSCpsduwH24Z2fjdYCj/Yux+UXgmYu4WVApT1E+v2iKNKnbAt/8KTMN/NWRXnTChXk3E1cPL81Kvw==",
   "success": true,
   "projectFilePath": "C:\\Source\\gT_Underground\\gT_UndergroundAPI\\gT_UndergroundAPI.csproj",
   "expectedPackageFiles": [
@@ -58,7 +58,10 @@
     "C:\\Users\\user\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\6.0.21\\microsoft.netcore.app.runtime.linux-x64.6.0.21.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\6.0.21\\microsoft.aspnetcore.app.runtime.linux-x64.6.0.21.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\6.0.21\\microsoft.netcore.app.host.linux-x64.6.0.21.nupkg.sha512"
   ],
   "logs": []
 }
