@@ -6,13 +6,15 @@ import { HealthCheckComponent } from './health-check/health-check.component';
 import { LoginComponent } from './auth/login.component';
 import { AuthGuard } from './auth/auth.guard';
 import { RegisterComponent } from './auth/register/register.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'fetch-data', component: FetchDataComponent },
   { path: 'health-check', component: HealthCheckComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: UserProfileComponent }
 ];
 
 @NgModule({

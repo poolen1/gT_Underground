@@ -67,3 +67,11 @@
 /.vs/gT_Underground/FileContentIndex/0569eba2-cf0d-403e-814a-5861f0914719.vsidx
 /.vs/gT_Underground/FileContentIndex
 /.vs/ProjectEvaluation
+/gT_UndergroundAPI/bin/Debug/net6.0/appsettings.json
+/gT_UndergroundAPI/bin/Release/net6.0/appsettings.json
+/gT_UndergroundAPI/appsettings.json
+/gT_UndergroundAPI/obj/Debug/net6.0/apphost.exe
+/gT_UndergroundAPI/obj/Debug/net6.0/gT_UndergroundAPI.assets.cache
+/gT_UndergroundAPI/obj/gT_UndergroundAPI.csproj.nuget.dgspec.json
+/gT_UndergroundAPI/obj/project.assets.json
+/gT_UndergroundAPI/obj/project.nuget.cache

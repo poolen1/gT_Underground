@@ -3,6 +3,7 @@ using gT_UndergroundAPI.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace gT_UndergroundAPI.Controllers
 {
@@ -88,6 +89,35 @@ namespace gT_UndergroundAPI.Controllers
             {
                 Success = true,
                 Message = "Registration successful."
+            });
+        }
+
+        [HttpGet("Profile")]
+        public async Task<IActionResult> GetUserProfile(ProfileRequest profileRequest)
+        {
+            var user = await _userManager.FindByIdAsync(profileRequest.UserId);
+            if (user == null)
+            {
+                return Ok(new LoginResult()
+                {
+                    Success = false,
+                    Message = "Problem with user profile."
+                });
+            }
+
+            UserProfile userProfile = (new UserProfile()
+            {
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                UserName = user.UserName,
+                UserEmail = user.Email,
+                UserPhone = user.PhoneNumber
+            });
+
+            return Ok(new ProfileResult()
+            {
+                Success = true,
+                Profile = userProfile
             });
         }
     }
