@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+
 namespace gT_UndergroundAPI.Data
 {
     public class LoginResult
@@ -17,5 +19,7 @@ namespace gT_UndergroundAPI.Data
         /// The JWT token if the Login attempt is successful, or NULL if not.
         /// </summary>
         public string? Token { get; set; }
+
+        public string? UserName { get; set; }
     }
 }

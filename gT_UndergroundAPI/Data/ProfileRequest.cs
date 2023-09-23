@@ -4,6 +4,6 @@ namespace gT_UndergroundAPI.Data
 {
     public class ProfileRequest
     {
-        public string UserId { get; set; } = null!;
+        public string UserName { get; set; } = null!;
     }
 }

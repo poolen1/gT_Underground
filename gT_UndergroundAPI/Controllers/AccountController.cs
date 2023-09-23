@@ -31,7 +31,7 @@ namespace gT_UndergroundAPI.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginRequest loginRequest)
         {
-            var user = await _userManager.FindByNameAsync(loginRequest.Email);
+            ApplicationUser user = await _userManager.FindByNameAsync(loginRequest.Email);
             if (user == null
                 || !await _userManager.CheckPasswordAsync(user, loginRequest.Password))
             {
@@ -47,7 +47,8 @@ namespace gT_UndergroundAPI.Controllers
             {
                 Success = true,
                 Message = "Login successful.",
-                Token = jwt
+                Token = jwt,
+                UserName = user.UserName!
             });
         }
 
@@ -92,13 +93,15 @@ namespace gT_UndergroundAPI.Controllers
             });
         }
 
-        [HttpGet("Profile")]
-        public async Task<IActionResult> GetUserProfile(ProfileRequest profileRequest)
+        [HttpPost("Profile")]
+        public IActionResult GetUserProfile(ProfileRequest profileRequest)
         {
-            var user = await _userManager.FindByIdAsync(profileRequest.UserId);
+            // var user = await _userManager.FindByIdAsync(profileRequest.UserId);
+            var user = _userManager.Users.FirstOrDefault(u => 
+                u.UserName == profileRequest.UserName);
             if (user == null)
             {
-                return Ok(new LoginResult()
+                return Ok(new ProfileResult()
                 {
                     Success = false,
                     Message = "Problem with user profile."
@@ -117,6 +120,7 @@ namespace gT_UndergroundAPI.Controllers
             return Ok(new ProfileResult()
             {
                 Success = true,
+                Message = "Successfully returned user profile",
                 Profile = userProfile
             });
         }

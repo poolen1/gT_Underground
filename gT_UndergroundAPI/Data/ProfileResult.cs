@@ -8,6 +8,6 @@ namespace gT_UndergroundAPI.Data
 
         public string Message { get; set; } = null!;
 
-        public UserProfile Profile { get; set; } = null!;
+        public UserProfile? Profile { get; set; } = null!;
     }
 }

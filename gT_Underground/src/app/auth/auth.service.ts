@@ -40,8 +40,11 @@ export class AuthService {
     var url = environment.baseUrl + "api/Account/Login";
     return this.http.post<LoginResult>(url, item)
       .pipe(tap(loginResult => {
-        if (loginResult.success && loginResult.token) {
-        localStorage.setItem(this.tokenKey, loginResult.token);
+        if (loginResult.success && loginResult.token && loginResult.userName) {
+
+          localStorage.setItem(this.tokenKey, loginResult.token);
+          localStorage.setItem("userName", loginResult.userName);
+          
         this.setAuthStatus(true);
       }
     }));
@@ -62,5 +65,4 @@ export class AuthService {
     this._authStatus.next(isAuthenticated);
   }
 
-  
 }
